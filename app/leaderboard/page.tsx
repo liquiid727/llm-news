@@ -23,6 +23,20 @@ import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { GlitchText } from "@/components/glitch-text"
 
+type LeaderboardItem = {
+  id: number
+  rank: number
+  name: string
+  avatar: string
+  score: number
+  trend: "up" | "down" | "same"
+  trendValue: number
+  element: string
+  elementColor: string
+  description: string
+  stats: { reasoning: number; coding: number; creative: number }
+}
+
 const categories = [
   { id: "overall", name: "综合榜", icon: Brain, color: "neon-blue" },
   { id: "reasoning", name: "推理能力", icon: Cpu, color: "neon-pink" },
@@ -31,7 +45,7 @@ const categories = [
   { id: "newmodels", name: "新星榜", icon: Sparkles, color: "neon-purple" },
 ]
 
-const leaderboardDataMap: Record<string, typeof overallData> = {
+const leaderboardDataMap: Record<string, LeaderboardItem[]> = {
   overall: [
     {
       id: 1,
@@ -512,7 +526,7 @@ export default function LeaderboardPage() {
 
 // Leaderboard Item Component
 interface LeaderboardItemProps {
-  item: (typeof overallData)[0]
+  item: LeaderboardItem
   maxScore: number
   isExpanded: boolean
   onToggle: () => void
