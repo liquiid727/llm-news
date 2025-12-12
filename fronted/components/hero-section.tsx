@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { useEffect, useState } from "react"
 import { Zap, Signal, Activity } from "lucide-react"
 import { GlitchText } from "./glitch-text"
@@ -66,9 +67,11 @@ export function HeroSection() {
               <span className="relative z-10">进入情报室</span>
               <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-neon-pink to-neon-blue transition-transform duration-300 group-hover:translate-x-0" />
             </button>
-            <button className="rounded-lg border border-neon-pink/50 bg-neon-pink/10 px-8 py-3 font-bold text-neon-pink transition-all duration-300 hover:bg-neon-pink/20 hover:shadow-[0_0_20px_rgba(255,0,170,0.3)]">
-              模型档案
-            </button>
+            <Link href="/models">
+              <button className="rounded-lg border border-neon-pink/50 bg-neon-pink/10 px-8 py-3 font-bold text-neon-pink transition-all duration-300 hover:bg-neon-pink/20 hover:shadow-[0_0_20px_rgba(255,0,170,0.3)]">
+                模型档案
+              </button>
+            </Link>
           </div>
         </div>
       </div>

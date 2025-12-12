@@ -9,8 +9,9 @@ const navLinks = [
   { name: "首页", href: "/" },
   { name: "新闻", href: "/#news" },
   { name: "排行榜", href: "/leaderboard" },
+  { name: "模型广场", href: "/models" },
   { name: "Hot", href: "/#hot" },
-  { name: "实例", href: "/#examples" },
+  { name: "测评", href: "/#benchmark" },
 ]
 
 export function Navbar() {
