@@ -1,0 +1,21 @@
+{
+  "version": "1.0",
+  "last_updated": "2025-12-11T12:00:00Z",
+  "data_structure": {
+    "organization": [
+        {
+            "name": "string，组织名称",
+            "id": "string，组织ID",
+            "models":[
+                {
+                    "name": "string，模型名称",
+                    "id": "string，模型ID",
+                    "release_date": "string，模型发布日期"
+                }
+            ]
+            
+        }
+    ],
+    "last_fetched": "string，数据获取时间戳"
+  }
+}

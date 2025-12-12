@@ -1,0 +1,37 @@
+{
+  "version": "1.0",
+  "last_updated": "2025-12-11T12:00:00Z",
+  "data_structure": {
+    "models": [
+      {
+        "model_id": "string，模型唯一标识，如 'claude-3-5-sonnet-20241022'",
+        "name": "string，模型展示名称，如 'Claude 3.5 Sonnet'",
+        "organization": {
+          "id": "string，机构ID，如 'anthropic'",
+          "name": "string，机构全名，如 'Anthropic'",
+          "icon_url": "string | null，机构图标本地路径或URL"
+        },
+        "scores": {
+          "aime_2025": "number | null，分数或null",
+          "gpqa": "number | null,高难度专业领域的纯文本深度知识",
+          "mmmu": "number | null ,结合图像进行理解的跨学科综合知识与推理",
+          "chat": "number | null ,模型在开放、交互式对话中获得的人类综合偏好",
+          "swe_bench":"number | null ,软代码和工程能力",
+          "code":"number | null ,软代码和工程能力"
+        },
+        "meta": {
+          "release_date": "string | null，发布日期",
+          "license": "string | null，许可证",
+          "context_length": "number | null，上下文长度",
+          "input_price": "number | null，输入价格/每百万tokens",
+          "output_price": "number | null，输出价格/每百万tokens"
+        },
+        "rank": {
+          "overall": "number | null，综合排名",
+          "last_change": "number | null，排名变化（较上次）"
+        }
+      }
+    ],
+    "last_fetched": "string，数据获取时间戳"
+  }
+}

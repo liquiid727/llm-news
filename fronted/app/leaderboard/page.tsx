@@ -1,12 +1,9 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Image from "next/image"
 import {
   Trophy,
-  TrendingUp,
-  TrendingDown,
-  Minus,
   ChevronDown,
   ChevronUp,
   Crown,
@@ -22,20 +19,8 @@ import { cn } from "@/lib/utils"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { GlitchText } from "@/components/glitch-text"
+import type { LeaderboardItem, ZeroEvalJson, ZeroEvalModel, LeaderboardItemProps } from "@/lib/type"
 
-type LeaderboardItem = {
-  id: number
-  rank: number
-  name: string
-  avatar: string
-  score: number
-  trend: "up" | "down" | "same"
-  trendValue: number
-  element: string
-  elementColor: string
-  description: string
-  stats: { reasoning: number; coding: number; creative: number }
-}
 
 const categories = [
   { id: "overall", name: "综合榜", icon: Brain, color: "neon-blue" },
@@ -45,287 +30,124 @@ const categories = [
   { id: "newmodels", name: "新星榜", icon: Sparkles, color: "neon-purple" },
 ]
 
-const leaderboardDataMap: Record<string, LeaderboardItem[]> = {
-  overall: [
-    {
-      id: 1,
-      rank: 1,
-      name: "GPT-4o",
-      avatar: "/openai-logo-futuristic-neon.jpg",
-      score: 98520,
-      trend: "up",
-      trendValue: 3,
-      element: "OpenAI",
-      elementColor: "neon-green",
-      description: "OpenAI 最新旗舰模型，多模态能力强大，支持语音、图像、文本输入输出。",
-      stats: { reasoning: 95, coding: 92, creative: 90 },
-    },
-    {
-      id: 2,
-      rank: 2,
-      name: "Claude 3.5 Sonnet",
-      avatar: "/anthropic-ai-logo-purple-neon.jpg",
-      score: 94180,
-      trend: "up",
-      trendValue: 1,
-      element: "Anthropic",
-      elementColor: "neon-purple",
-      description: "Anthropic 推出的高性能模型，在长文本理解和复杂推理方面表现出色。",
-      stats: { reasoning: 94, coding: 96, creative: 88 },
-    },
-    {
-      id: 3,
-      rank: 3,
-      name: "Gemini 1.5 Pro",
-      avatar: "/google-ai-logo-blue-neon.jpg",
-      score: 91750,
-      trend: "same",
-      trendValue: 0,
-      element: "Google",
-      elementColor: "neon-blue",
-      description: "Google 最新大模型，拥有超长上下文窗口，多模态理解能力一流。",
-      stats: { reasoning: 92, coding: 88, creative: 91 },
-    },
-    {
-      id: 4,
-      rank: 4,
-      name: "Llama 3.1 405B",
-      avatar: "/meta-ai-logo-cyan-neon.jpg",
-      score: 88340,
-      trend: "down",
-      trendValue: 2,
-      element: "Meta",
-      elementColor: "neon-blue",
-      description: "Meta 开源的超大规模模型，在多个基准测试中接近闭源模型水平。",
-      stats: { reasoning: 88, coding: 85, creative: 86 },
-    },
-    {
-      id: 5,
-      rank: 5,
-      name: "DeepSeek V3",
-      avatar: "/deepseek-ai-logo-orange-neon.jpg",
-      score: 85920,
-      trend: "up",
-      trendValue: 5,
-      element: "DeepSeek",
-      elementColor: "neon-pink",
-      description: "国产之光，MoE 架构设计，性价比极高，代码能力突出。",
-      stats: { reasoning: 86, coding: 94, creative: 82 },
-    },
-    {
-      id: 6,
-      rank: 6,
-      name: "Qwen 2.5 Max",
-      avatar: "/alibaba-qwen-ai-logo-red-neon.jpg",
-      score: 82650,
-      trend: "up",
-      trendValue: 4,
-      element: "阿里云",
-      elementColor: "destructive",
-      description: "通义千问最新版本，中文理解能力出众，多领域应用广泛。",
-      stats: { reasoning: 85, coding: 88, creative: 84 },
-    },
-    {
-      id: 7,
-      rank: 7,
-      name: "Mistral Large 2",
-      avatar: "/mistral-ai-logo-teal-neon.jpg",
-      score: 79800,
-      trend: "same",
-      trendValue: 0,
-      element: "Mistral",
-      elementColor: "neon-blue",
-      description: "欧洲 AI 领军者，在效率和性能之间取得良好平衡。",
-      stats: { reasoning: 82, coding: 84, creative: 80 },
-    },
-    {
-      id: 8,
-      rank: 8,
-      name: "Grok-2",
-      avatar: "/xai-grok-logo-white-neon.jpg",
-      score: 76540,
-      trend: "up",
-      trendValue: 3,
-      element: "xAI",
-      elementColor: "neon-purple",
-      description: "xAI 出品，实时信息获取能力强，风格幽默独特。",
-      stats: { reasoning: 80, coding: 78, creative: 85 },
-    },
-  ],
-  reasoning: [
-    {
-      id: 1,
-      rank: 1,
-      name: "o1-preview",
-      avatar: "/openai-o1-logo-gold-neon.jpg",
-      score: 156800,
-      trend: "up",
-      trendValue: 5,
-      element: "OpenAI",
-      elementColor: "neon-green",
-      description: "专为复杂推理设计的模型，数学和逻辑能力远超同类。",
-      stats: { reasoning: 100, coding: 92, creative: 75 },
-    },
-    {
-      id: 2,
-      rank: 2,
-      name: "Claude 3 Opus",
-      avatar: "/anthropic-opus-logo-purple-neon.jpg",
-      score: 148500,
-      trend: "same",
-      trendValue: 0,
-      element: "Anthropic",
-      elementColor: "neon-purple",
-      description: "Anthropic 旗舰版本，深度思考能力强大。",
-      stats: { reasoning: 96, coding: 90, creative: 92 },
-    },
-    {
-      id: 3,
-      rank: 3,
-      name: "Gemini Ultra",
-      avatar: "/google-gemini-ultra-logo-blue-neon.jpg",
-      score: 142300,
-      trend: "up",
-      trendValue: 2,
-      element: "Google",
-      elementColor: "neon-blue",
-      description: "Google 最强推理模型，在复杂问题上表现卓越。",
-      stats: { reasoning: 94, coding: 88, creative: 86 },
-    },
-  ],
-  popularity: [
-    {
-      id: 1,
-      rank: 1,
-      name: "ChatGPT",
-      avatar: "/placeholder.svg?height=100&width=100",
-      score: 892000,
-      trend: "up",
-      trendValue: 12,
-      element: "OpenAI",
-      elementColor: "neon-green",
-      description: "全球用户最多的 AI 助手，引领大模型应用浪潮。",
-      stats: { reasoning: 90, coding: 88, creative: 92 },
-    },
-    {
-      id: 2,
-      rank: 2,
-      name: "Claude",
-      avatar: "/placeholder.svg?height=100&width=100",
-      score: 456000,
-      trend: "up",
-      trendValue: 25,
-      element: "Anthropic",
-      elementColor: "neon-purple",
-      description: "以安全和有帮助著称，开发者社区增长迅速。",
-      stats: { reasoning: 94, coding: 92, creative: 88 },
-    },
-    {
-      id: 3,
-      rank: 3,
-      name: "Gemini",
-      avatar: "/placeholder.svg?height=100&width=100",
-      score: 398000,
-      trend: "up",
-      trendValue: 18,
-      element: "Google",
-      elementColor: "neon-blue",
-      description: "Google 生态整合优势明显，用户基数庞大。",
-      stats: { reasoning: 88, coding: 85, creative: 90 },
-    },
-  ],
-  coding: [
-    {
-      id: 1,
-      rank: 1,
-      name: "Claude 3.5 Sonnet",
-      avatar: "/placeholder.svg?height=100&width=100",
-      score: 96,
-      trend: "up",
-      trendValue: 3,
-      element: "Anthropic",
-      elementColor: "neon-purple",
-      description: "代码生成能力公认第一，复杂项目理解出众。",
-      stats: { reasoning: 94, coding: 98, creative: 86 },
-    },
-    {
-      id: 2,
-      rank: 2,
-      name: "DeepSeek Coder V2",
-      avatar: "/placeholder.svg?height=100&width=100",
-      score: 94,
-      trend: "up",
-      trendValue: 8,
-      element: "DeepSeek",
-      elementColor: "neon-pink",
-      description: "专为编程优化，开源社区最受欢迎的代码模型。",
-      stats: { reasoning: 85, coding: 97, creative: 72 },
-    },
-    {
-      id: 3,
-      rank: 3,
-      name: "GPT-4 Turbo",
-      avatar: "/placeholder.svg?height=100&width=100",
-      score: 92,
-      trend: "same",
-      trendValue: 0,
-      element: "OpenAI",
-      elementColor: "neon-green",
-      description: "全能型选手，代码能力均衡稳定。",
-      stats: { reasoning: 92, coding: 94, creative: 90 },
-    },
-  ],
-  newmodels: [
-    {
-      id: 1,
-      rank: 1,
-      name: "GPT-5",
-      avatar: "/placeholder.svg?height=100&width=100",
-      score: 45200,
-      trend: "up",
-      trendValue: 99,
-      element: "OpenAI",
-      elementColor: "neon-green",
-      description: "即将发布的下一代模型，预计将实现重大突破。",
-      stats: { reasoning: 98, coding: 96, creative: 95 },
-    },
-    {
-      id: 2,
-      rank: 2,
-      name: "Gemini 2.0",
-      avatar: "/placeholder.svg?height=100&width=100",
-      score: 38900,
-      trend: "up",
-      trendValue: 45,
-      element: "Google",
-      elementColor: "neon-blue",
-      description: "Google 下一代多模态模型，Agent 能力大幅增强。",
-      stats: { reasoning: 94, coding: 90, creative: 92 },
-    },
-    {
-      id: 3,
-      rank: 3,
-      name: "Claude 4",
-      avatar: "/placeholder.svg?height=100&width=100",
-      score: 32500,
-      trend: "up",
-      trendValue: 28,
-      element: "Anthropic",
-      elementColor: "neon-purple",
-      description: "Anthropic 下一代旗舰，安全与能力的新标杆。",
-      stats: { reasoning: 96, coding: 94, creative: 90 },
-    },
-  ],
+const ORG_COLOR: Record<string, string> = {
+  openai: "neon-green",
+  anthropic: "neon-purple",
+  google: "neon-blue",
+  meta: "neon-blue",
+  deepseek: "neon-pink",
+  alibaba: "destructive",
+  mistralai: "neon-blue",
+  xai: "neon-purple",
 }
 
-const overallData = leaderboardDataMap.overall
+function pickScoreOverall(m: ZeroEvalModel) {
+  const v = m.scores?.chat ?? m.scores?.gpqa ?? m.scores?.aime_2025 ?? m.scores?.mmmu ?? m.scores?.code ?? m.scores?.swe_bench ?? 0
+  return Math.round((v || 0) * 100000)
+}
+
+function pickScoreReasoning(m: ZeroEvalModel) {
+  const v = m.scores?.gpqa ?? m.scores?.aime_2025 ?? m.scores?.mmmu ?? 0
+  return Math.round((v || 0) * 100000)
+}
+
+function pickScorePopularity(m: ZeroEvalModel) {
+  const v = m.scores?.chat ?? m.scores?.gpqa ?? 0
+  return Math.round((v || 0) * 100000)
+}
+
+function pickScoreCodingPercent(m: ZeroEvalModel) {
+  const v = m.scores?.code ?? m.scores?.swe_bench ?? 0
+  return Math.round((v || 0) * 100)
+}
+
+function toItem(m: ZeroEvalModel, score: number, rank: number): LeaderboardItem {
+  const orgId = (m.organization?.id || "").toLowerCase()
+  const elementColor = ORG_COLOR[orgId] || "neon-blue"
+  const avatar = m.organization?.icon_url || "/placeholder.svg?height=100&width=100"
+  const stats = {
+    reasoning: Math.round(((m.scores?.gpqa ?? 0) || 0) * 100),
+    coding: Math.round(((m.scores?.code ?? 0) || 0) * 100),
+    creative: Math.round(((m.scores?.mmmu ?? 0) || 0) * 100),
+  }
+  return {
+    id: rank,
+    rank,
+    name: m.name || m.model_id || "Unknown",
+    avatar,
+    score,
+    element: m.organization?.name || "Unknown",
+    elementColor,
+    description: `${m.name || m.model_id} · ${m.organization?.name || "Unknown"}`,
+    stats,
+  }
+}
+
+function buildDataMap(models: ZeroEvalModel[]): Record<string, LeaderboardItem[]> {
+  const overallSorted = [...models].sort((a, b) => pickScoreOverall(b) - pickScoreOverall(a))
+  const overall = overallSorted.map((m, i) => toItem(m, pickScoreOverall(m), i + 1))
+
+  const reasoningSorted = [...models].sort((a, b) => pickScoreReasoning(b) - pickScoreReasoning(a))
+  const reasoning = reasoningSorted.map((m, i) => toItem(m, pickScoreReasoning(m), i + 1))
+
+  const popularitySorted = [...models].sort((a, b) => pickScorePopularity(b) - pickScorePopularity(a))
+  const popularity = popularitySorted.map((m, i) => toItem(m, pickScorePopularity(m), i + 1))
+
+  const codingCandidates = models.filter((m) => (m.scores?.code ?? m.scores?.swe_bench) != null)
+  const codingSorted = [...codingCandidates].sort((a, b) => pickScoreCodingPercent(b) - pickScoreCodingPercent(a))
+  const coding = codingSorted.map((m, i) => toItem(m, pickScoreCodingPercent(m), i + 1))
+
+  const withDate = models
+    .map((m) => ({ m, d: m.meta?.release_date ? Date.parse(m.meta.release_date) : NaN }))
+    .filter((x) => !Number.isNaN(x.d))
+    .sort((a, b) => b.d - a.d)
+    .map((x, i) => toItem(x.m, pickScoreOverall(x.m), i + 1))
+  const newmodels = withDate.length > 0 ? withDate : overall.slice(0, 10)
+
+  return { overall, reasoning, popularity, coding, newmodels }
+}
+
+let cachedLoad: Promise<{ map: Record<string, LeaderboardItem[]>; lastUpdated: string }> | null = null
+async function loadData(): Promise<{ map: Record<string, LeaderboardItem[]>; lastUpdated: string }> {
+  if (cachedLoad) return cachedLoad
+  cachedLoad = (async () => {
+    const res = await fetch("/data/zeroeval_merged_leaderboard.json", { cache: "force-cache" })
+    if (!res.ok) throw new Error(`load failed: ${res.status}`)
+    const json = (await res.json()) as ZeroEvalJson
+    const models = json?.data_structure?.models || []
+    const map = buildDataMap(models)
+    const lastUpdated = json?.last_updated || ""
+    return { map, lastUpdated }
+  })()
+  return cachedLoad
+}
 
 export default function LeaderboardPage() {
   const [activeCategory, setActiveCategory] = useState("overall")
   const [expandedId, setExpandedId] = useState<number | null>(null)
+  const [dataMap, setDataMap] = useState<Record<string, LeaderboardItem[]>>({
+    overall: [],
+    reasoning: [],
+    popularity: [],
+    coding: [],
+    newmodels: [],
+  })
+  const [lastUpdated, setLastUpdated] = useState<string>("")
+  const [loadError, setLoadError] = useState<string>("")
 
-  const currentData = leaderboardDataMap[activeCategory] || []
-  const maxScore = Math.max(...currentData.map((item) => item.score))
+  useEffect(() => {
+    loadData()
+      .then(({ map, lastUpdated }) => {
+        setDataMap(map)
+        setLastUpdated(lastUpdated)
+      })
+      .catch((e) => {
+        setLoadError(String(e))
+      })
+  }, [])
+
+  const currentData = dataMap[activeCategory] || []
+  const maxScore = Math.max(...(currentData.map((item) => item.score).concat([0])))
   const activeTab = categories.find((c) => c.id === activeCategory)
 
   return (
@@ -491,6 +313,11 @@ export default function LeaderboardPage() {
 
                   {/* Leaderboard List */}
                   <div className="space-y-3">
+                    {loadError && (
+                      <div className="rounded-lg border border-destructive/50 bg-destructive/10 p-3 font-mono text-xs text-destructive">
+                        {loadError}
+                      </div>
+                    )}
                     {currentData.map((item, index) => (
                       <LeaderboardItem
                         key={item.id}
@@ -506,7 +333,7 @@ export default function LeaderboardPage() {
 
                   {/* Footer */}
                   <div className="mt-8 flex flex-col items-center justify-between gap-4 border-t border-border/50 pt-6 sm:flex-row">
-                    <p className="text-sm text-muted-foreground">数据更新时间: 2025-01-15 12:30:00</p>
+                    <p className="text-sm text-muted-foreground">数据更新时间: {lastUpdated || "N/A"}</p>
                     <button className="flex items-center gap-2 rounded-lg border border-neon-blue/50 bg-neon-blue/10 px-4 py-2 font-mono text-sm text-neon-blue transition-all hover:bg-neon-blue/20">
                       <Zap className="h-4 w-4" />
                       刷新数据
@@ -525,15 +352,6 @@ export default function LeaderboardPage() {
 }
 
 // Leaderboard Item Component
-interface LeaderboardItemProps {
-  item: LeaderboardItem
-  maxScore: number
-  isExpanded: boolean
-  onToggle: () => void
-  isPercentage?: boolean
-  delay?: number
-}
-
 function LeaderboardItem({ item, maxScore, isExpanded, onToggle, isPercentage, delay = 0 }: LeaderboardItemProps) {
   const progressPercentage = isPercentage ? item.score : (item.score / maxScore) * 100
 
@@ -628,27 +446,12 @@ function LeaderboardItem({ item, maxScore, isExpanded, onToggle, isPercentage, d
           </div>
         </div>
 
-        {/* Score & Trend */}
+        {/* Score */}
         <div className="flex shrink-0 items-center gap-4">
           <div className="text-right">
             <p className="font-mono text-lg font-bold">
               {isPercentage ? `${item.score}%` : item.score.toLocaleString()}
             </p>
-          </div>
-
-          {/* Trend Indicator */}
-          <div
-            className={cn(
-              "flex items-center gap-1 rounded-full px-2 py-1",
-              item.trend === "up" && "bg-neon-green/20 text-neon-green",
-              item.trend === "down" && "bg-destructive/20 text-destructive",
-              item.trend === "same" && "bg-muted text-muted-foreground",
-            )}
-          >
-            {item.trend === "up" && <TrendingUp className="h-3 w-3 animate-bounce-subtle" />}
-            {item.trend === "down" && <TrendingDown className="h-3 w-3" />}
-            {item.trend === "same" && <Minus className="h-3 w-3" />}
-            <span className="font-mono text-xs">{item.trendValue > 0 ? `+${item.trendValue}` : item.trendValue}</span>
           </div>
 
           {/* Expand Button */}
