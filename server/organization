@@ -1,0 +1,1394 @@
+[
+    {
+        "name": "AI21 Labs",
+        "organization_id": "ai21",
+        "models": [
+            {
+                "model_id": "jamba-1.5-large",
+                "name": "Jamba 1.5 Large",
+                "organization_id": "ai21",
+                "release_date": "2024-08-22"
+            },
+            {
+                "model_id": "jamba-1.5-mini",
+                "name": "Jamba 1.5 Mini",
+                "organization_id": "ai21",
+                "release_date": "2024-08-22"
+            }
+        ]
+    },
+    {
+        "name": "Alibaba Cloud / Qwen Team",
+        "organization_id": "qwen",
+        "models": [
+            {
+                "model_id": "qwen3-vl-235b-a22b-instruct",
+                "name": "Qwen3 VL 235B A22B Instruct",
+                "organization_id": "qwen",
+                "release_date": "2025-09-22"
+            },
+            {
+                "model_id": "qwen3-vl-235b-a22b-thinking",
+                "name": "Qwen3 VL 235B A22B Thinking",
+                "organization_id": "qwen",
+                "release_date": "2025-09-22"
+            },
+            {
+                "model_id": "qwen3-vl-30b-a3b-instruct",
+                "name": "Qwen3 VL 30B A3B Instruct",
+                "organization_id": "qwen",
+                "release_date": "2025-09-22"
+            },
+            {
+                "model_id": "qwen3-vl-30b-a3b-thinking",
+                "name": "Qwen3 VL 30B A3B Thinking",
+                "organization_id": "qwen",
+                "release_date": "2025-09-22"
+            },
+            {
+                "model_id": "qwen3-vl-32b-instruct",
+                "name": "Qwen3 VL 32B Instruct",
+                "organization_id": "qwen",
+                "release_date": "2025-09-22"
+            },
+            {
+                "model_id": "qwen3-vl-32b-thinking",
+                "name": "Qwen3 VL 32B Thinking",
+                "organization_id": "qwen",
+                "release_date": "2025-09-22"
+            },
+            {
+                "model_id": "qwen3-vl-4b-instruct",
+                "name": "Qwen3 VL 4B Instruct",
+                "organization_id": "qwen",
+                "release_date": "2025-09-22"
+            },
+            {
+                "model_id": "qwen3-vl-4b-thinking",
+                "name": "Qwen3 VL 4B Thinking",
+                "organization_id": "qwen",
+                "release_date": "2025-09-22"
+            },
+            {
+                "model_id": "qwen3-vl-8b-instruct",
+                "name": "Qwen3 VL 8B Instruct",
+                "organization_id": "qwen",
+                "release_date": "2025-09-22"
+            },
+            {
+                "model_id": "qwen3-vl-8b-thinking",
+                "name": "Qwen3 VL 8B Thinking",
+                "organization_id": "qwen",
+                "release_date": "2025-09-22"
+            },
+            {
+                "model_id": "qwen3-next-80b-a3b-base",
+                "name": "Qwen3-Next-80B-A3B-Base",
+                "organization_id": "qwen",
+                "release_date": "2025-09-10"
+            },
+            {
+                "model_id": "qwen3-next-80b-a3b-instruct",
+                "name": "Qwen3-Next-80B-A3B-Instruct",
+                "organization_id": "qwen",
+                "release_date": "2025-09-10"
+            },
+            {
+                "model_id": "qwen3-next-80b-a3b-thinking",
+                "name": "Qwen3-Next-80B-A3B-Thinking",
+                "organization_id": "qwen",
+                "release_date": "2025-09-10"
+            },
+            {
+                "model_id": "qwen3-235b-a22b-thinking-2507",
+                "name": "Qwen3-235B-A22B-Thinking-2507",
+                "organization_id": "qwen",
+                "release_date": "2025-07-25"
+            },
+            {
+                "model_id": "qwen3-235b-a22b-instruct-2507",
+                "name": "Qwen3-235B-A22B-Instruct-2507",
+                "organization_id": "qwen",
+                "release_date": "2025-07-22"
+            },
+            {
+                "model_id": "qwen3-235b-a22b",
+                "name": "Qwen3 235B A22B",
+                "organization_id": "qwen",
+                "release_date": "2025-04-29"
+            },
+            {
+                "model_id": "qwen3-30b-a3b",
+                "name": "Qwen3 30B A3B",
+                "organization_id": "qwen",
+                "release_date": "2025-04-29"
+            },
+            {
+                "model_id": "qwen3-32b",
+                "name": "Qwen3 32B",
+                "organization_id": "qwen",
+                "release_date": "2025-04-29"
+            },
+            {
+                "model_id": "qwen2.5-omni-7b",
+                "name": "Qwen2.5-Omni-7B",
+                "organization_id": "qwen",
+                "release_date": "2025-03-27"
+            },
+            {
+                "model_id": "qwq-32b",
+                "name": "QwQ-32B",
+                "organization_id": "qwen",
+                "release_date": "2025-03-05"
+            },
+            {
+                "model_id": "qwen2.5-vl-32b",
+                "name": "Qwen2.5 VL 32B Instruct",
+                "organization_id": "qwen",
+                "release_date": "2025-02-28"
+            },
+            {
+                "model_id": "qwen3-coder-480b-a35b-instruct",
+                "name": "Qwen3-Coder 480B A35B Instruct",
+                "organization_id": "qwen",
+                "release_date": "2025-01-31"
+            },
+            {
+                "model_id": "qwen2.5-vl-72b",
+                "name": "Qwen2.5 VL 72B Instruct",
+                "organization_id": "qwen",
+                "release_date": "2025-01-26"
+            },
+            {
+                "model_id": "qwen2.5-vl-7b",
+                "name": "Qwen2.5 VL 7B Instruct",
+                "organization_id": "qwen",
+                "release_date": "2025-01-26"
+            },
+            {
+                "model_id": "qvq-72b-preview",
+                "name": "QvQ-72B-Preview",
+                "organization_id": "qwen",
+                "release_date": "2024-12-25"
+            },
+            {
+                "model_id": "qwq-32b-preview",
+                "name": "QwQ-32B-Preview",
+                "organization_id": "qwen",
+                "release_date": "2024-11-28"
+            },
+            {
+                "model_id": "qwen-2.5-14b-instruct",
+                "name": "Qwen2.5 14B Instruct",
+                "organization_id": "qwen",
+                "release_date": "2024-09-19"
+            },
+            {
+                "model_id": "qwen-2.5-32b-instruct",
+                "name": "Qwen2.5 32B Instruct",
+                "organization_id": "qwen",
+                "release_date": "2024-09-19"
+            },
+            {
+                "model_id": "qwen-2.5-72b-instruct",
+                "name": "Qwen2.5 72B Instruct",
+                "organization_id": "qwen",
+                "release_date": "2024-09-19"
+            },
+            {
+                "model_id": "qwen-2.5-7b-instruct",
+                "name": "Qwen2.5 7B Instruct",
+                "organization_id": "qwen",
+                "release_date": "2024-09-19"
+            },
+            {
+                "model_id": "qwen-2.5-coder-32b-instruct",
+                "name": "Qwen2.5-Coder 32B Instruct",
+                "organization_id": "qwen",
+                "release_date": "2024-09-19"
+            },
+            {
+                "model_id": "qwen-2.5-coder-7b-instruct",
+                "name": "Qwen2.5-Coder 7B Instruct",
+                "organization_id": "qwen",
+                "release_date": "2024-09-19"
+            },
+            {
+                "model_id": "qwen2-vl-72b",
+                "name": "Qwen2-VL-72B-Instruct",
+                "organization_id": "qwen",
+                "release_date": "2024-08-29"
+            },
+            {
+                "model_id": "qwen2-72b-instruct",
+                "name": "Qwen2 72B Instruct",
+                "organization_id": "qwen",
+                "release_date": "2024-07-23"
+            },
+            {
+                "model_id": "qwen2-7b-instruct",
+                "name": "Qwen2 7B Instruct",
+                "organization_id": "qwen",
+                "release_date": "2024-07-23"
+            }
+        ]
+    },
+    {
+        "name": "Amazon",
+        "organization_id": "amazon",
+        "models": [
+            {
+                "model_id": "nova-lite",
+                "name": "Nova Lite",
+                "organization_id": "amazon",
+                "release_date": "2024-11-20"
+            },
+            {
+                "model_id": "nova-micro",
+                "name": "Nova Micro",
+                "organization_id": "amazon",
+                "release_date": "2024-11-20"
+            },
+            {
+                "model_id": "nova-pro",
+                "name": "Nova Pro",
+                "organization_id": "amazon",
+                "release_date": "2024-11-20"
+            }
+        ]
+    },
+    {
+        "name": "Anthropic",
+        "organization_id": "anthropic",
+        "models": [
+            {
+                "model_id": "claude-opus-4-5-20251101",
+                "name": "Claude Opus 4.5",
+                "organization_id": "anthropic",
+                "release_date": "2025-11-24"
+            },
+            {
+                "model_id": "claude-haiku-4-5-20251001",
+                "name": "Claude Haiku 4.5",
+                "organization_id": "anthropic",
+                "release_date": "2025-10-15"
+            },
+            {
+                "model_id": "claude-sonnet-4-5-20250929",
+                "name": "Claude Sonnet 4.5",
+                "organization_id": "anthropic",
+                "release_date": "2025-09-29"
+            },
+            {
+                "model_id": "claude-opus-4-1-20250805",
+                "name": "Claude Opus 4.1",
+                "organization_id": "anthropic",
+                "release_date": "2025-08-05"
+            },
+            {
+                "model_id": "claude-opus-4-20250514",
+                "name": "Claude Opus 4",
+                "organization_id": "anthropic",
+                "release_date": "2025-05-22"
+            },
+            {
+                "model_id": "claude-sonnet-4-20250514",
+                "name": "Claude Sonnet 4",
+                "organization_id": "anthropic",
+                "release_date": "2025-05-22"
+            },
+            {
+                "model_id": "claude-3-7-sonnet-20250219",
+                "name": "Claude 3.7 Sonnet",
+                "organization_id": "anthropic",
+                "release_date": "2025-02-24"
+            },
+            {
+                "model_id": "claude-3-5-haiku-20241022",
+                "name": "Claude 3.5 Haiku",
+                "organization_id": "anthropic",
+                "release_date": "2024-10-22"
+            },
+            {
+                "model_id": "claude-3-5-sonnet-20241022",
+                "name": "Claude 3.5 Sonnet",
+                "organization_id": "anthropic",
+                "release_date": "2024-10-22"
+            },
+            {
+                "model_id": "claude-3-5-sonnet-20240620",
+                "name": "Claude 3.5 Sonnet",
+                "organization_id": "anthropic",
+                "release_date": "2024-06-21"
+            },
+            {
+                "model_id": "claude-3-haiku-20240307",
+                "name": "Claude 3 Haiku",
+                "organization_id": "anthropic",
+                "release_date": "2024-03-13"
+            },
+            {
+                "model_id": "claude-3-opus-20240229",
+                "name": "Claude 3 Opus",
+                "organization_id": "anthropic",
+                "release_date": "2024-02-29"
+            },
+            {
+                "model_id": "claude-3-sonnet-20240229",
+                "name": "Claude 3 Sonnet",
+                "organization_id": "anthropic",
+                "release_date": "2024-02-29"
+            }
+        ]
+    },
+    {
+        "name": "Cohere",
+        "organization_id": "cohere",
+        "models": [
+            {
+                "model_id": "command-r-plus-04-2024",
+                "name": "Command R+",
+                "organization_id": "cohere",
+                "release_date": "2024-08-30"
+            }
+        ]
+    },
+    {
+        "name": "DeepSeek",
+        "organization_id": "deepseek",
+        "models": [
+            {
+                "model_id": "deepseek-chat",
+                "name": "DeepSeek-V3.2 (Non-thinking)",
+                "organization_id": "deepseek",
+                "release_date": "2025-12-01"
+            },
+            {
+                "model_id": "deepseek-v3.2-speciale",
+                "name": "DeepSeek-V3.2-Speciale",
+                "organization_id": "deepseek",
+                "release_date": "2025-12-01"
+            },
+            {
+                "model_id": "deepseek-reasoner",
+                "name": "DeepSeek-V3.2 (Thinking)",
+                "organization_id": "deepseek",
+                "release_date": "2025-12-01"
+            },
+            {
+                "model_id": "deepseek-v3.2-exp",
+                "name": "DeepSeek-V3.2-Exp",
+                "organization_id": "deepseek",
+                "release_date": "2025-09-29"
+            },
+            {
+                "model_id": "deepseek-r1-0528",
+                "name": "DeepSeek-R1-0528",
+                "organization_id": "deepseek",
+                "release_date": "2025-05-28"
+            },
+            {
+                "model_id": "deepseek-v3-0324",
+                "name": "DeepSeek-V3 0324",
+                "organization_id": "deepseek",
+                "release_date": "2025-03-25"
+            },
+            {
+                "model_id": "deepseek-r1",
+                "name": "DeepSeek-R1",
+                "organization_id": "deepseek",
+                "release_date": "2025-01-20"
+            },
+            {
+                "model_id": "deepseek-r1-distill-llama-70b",
+                "name": "DeepSeek R1 Distill Llama 70B",
+                "organization_id": "deepseek",
+                "release_date": "2025-01-20"
+            },
+            {
+                "model_id": "deepseek-r1-distill-llama-8b",
+                "name": "DeepSeek R1 Distill Llama 8B",
+                "organization_id": "deepseek",
+                "release_date": "2025-01-20"
+            },
+            {
+                "model_id": "deepseek-r1-distill-qwen-14b",
+                "name": "DeepSeek R1 Distill Qwen 14B",
+                "organization_id": "deepseek",
+                "release_date": "2025-01-20"
+            },
+            {
+                "model_id": "deepseek-r1-distill-qwen-1.5b",
+                "name": "DeepSeek R1 Distill Qwen 1.5B",
+                "organization_id": "deepseek",
+                "release_date": "2025-01-20"
+            },
+            {
+                "model_id": "deepseek-r1-distill-qwen-32b",
+                "name": "DeepSeek R1 Distill Qwen 32B",
+                "organization_id": "deepseek",
+                "release_date": "2025-01-20"
+            },
+            {
+                "model_id": "deepseek-r1-distill-qwen-7b",
+                "name": "DeepSeek R1 Distill Qwen 7B",
+                "organization_id": "deepseek",
+                "release_date": "2025-01-20"
+            },
+            {
+                "model_id": "deepseek-r1-zero",
+                "name": "DeepSeek R1 Zero",
+                "organization_id": "deepseek",
+                "release_date": "2025-01-20"
+            },
+            {
+                "model_id": "deepseek-v3.1",
+                "name": "DeepSeek-V3.1",
+                "organization_id": "deepseek",
+                "release_date": "2025-01-10"
+            },
+            {
+                "model_id": "deepseek-v3",
+                "name": "DeepSeek-V3",
+                "organization_id": "deepseek",
+                "release_date": "2024-12-25"
+            },
+            {
+                "model_id": "deepseek-vl2",
+                "name": "DeepSeek VL2",
+                "organization_id": "deepseek",
+                "release_date": "2024-12-13"
+            },
+            {
+                "model_id": "deepseek-vl2-small",
+                "name": "DeepSeek VL2 Small",
+                "organization_id": "deepseek",
+                "release_date": "2024-12-13"
+            },
+            {
+                "model_id": "deepseek-vl2-tiny",
+                "name": "DeepSeek VL2 Tiny",
+                "organization_id": "deepseek",
+                "release_date": "2024-12-13"
+            },
+            {
+                "model_id": "deepseek-v2.5",
+                "name": "DeepSeek-V2.5",
+                "organization_id": "deepseek",
+                "release_date": "2024-05-08"
+            }
+        ]
+    },
+    {
+        "name": "Google",
+        "organization_id": "google",
+        "models": [
+            {
+                "model_id": "gemini-3-pro-preview",
+                "name": "Gemini 3 Pro",
+                "organization_id": "google",
+                "release_date": "2025-11-18"
+            },
+            {
+                "model_id": "gemma-3n-e2b",
+                "name": "Gemma 3n E2B",
+                "organization_id": "google",
+                "release_date": "2025-06-26"
+            },
+            {
+                "model_id": "gemma-3n-e2b-it",
+                "name": "Gemma 3n E2B Instructed",
+                "organization_id": "google",
+                "release_date": "2025-06-26"
+            },
+            {
+                "model_id": "gemma-3n-e4b",
+                "name": "Gemma 3n E4B",
+                "organization_id": "google",
+                "release_date": "2025-06-26"
+            },
+            {
+                "model_id": "gemma-3n-e4b-it",
+                "name": "Gemma 3n E4B Instructed",
+                "organization_id": "google",
+                "release_date": "2025-06-26"
+            },
+            {
+                "model_id": "gemini-2.5-flash-lite",
+                "name": "Gemini 2.5 Flash-Lite",
+                "organization_id": "google",
+                "release_date": "2025-06-17"
+            },
+            {
+                "model_id": "gemini-2.5-pro-preview-06-05",
+                "name": "Gemini 2.5 Pro Preview 06-05",
+                "organization_id": "google",
+                "release_date": "2025-06-05"
+            },
+            {
+                "model_id": "gemini-2.5-flash",
+                "name": "Gemini 2.5 Flash",
+                "organization_id": "google",
+                "release_date": "2025-05-20"
+            },
+            {
+                "model_id": "gemini-2.5-pro",
+                "name": "Gemini 2.5 Pro",
+                "organization_id": "google",
+                "release_date": "2025-05-20"
+            },
+            {
+                "model_id": "gemini-diffusion",
+                "name": "Gemini Diffusion",
+                "organization_id": "google",
+                "release_date": "2025-05-20"
+            },
+            {
+                "model_id": "gemma-3n-e2b-it-litert-preview",
+                "name": "Gemma 3n E2B Instructed LiteRT (Preview)",
+                "organization_id": "google",
+                "release_date": "2025-05-20"
+            },
+            {
+                "model_id": "gemma-3n-e4b-it-litert-preview",
+                "name": "Gemma 3n E4B Instructed LiteRT Preview",
+                "organization_id": "google",
+                "release_date": "2025-05-20"
+            },
+            {
+                "model_id": "medgemma-4b-it",
+                "name": "MedGemma 4B IT",
+                "organization_id": "google",
+                "release_date": "2025-05-20"
+            },
+            {
+                "model_id": "gemma-3-12b-it",
+                "name": "Gemma 3 12B",
+                "organization_id": "google",
+                "release_date": "2025-03-12"
+            },
+            {
+                "model_id": "gemma-3-1b-it",
+                "name": "Gemma 3 1B",
+                "organization_id": "google",
+                "release_date": "2025-03-12"
+            },
+            {
+                "model_id": "gemma-3-27b-it",
+                "name": "Gemma 3 27B",
+                "organization_id": "google",
+                "release_date": "2025-03-12"
+            },
+            {
+                "model_id": "gemma-3-4b-it",
+                "name": "Gemma 3 4B",
+                "organization_id": "google",
+                "release_date": "2025-03-12"
+            },
+            {
+                "model_id": "gemini-2.0-flash-lite",
+                "name": "Gemini 2.0 Flash-Lite",
+                "organization_id": "google",
+                "release_date": "2025-02-05"
+            },
+            {
+                "model_id": "gemini-2.0-flash-thinking",
+                "name": "Gemini 2.0 Flash Thinking",
+                "organization_id": "google",
+                "release_date": "2025-01-21"
+            },
+            {
+                "model_id": "gemini-2.0-flash",
+                "name": "Gemini 2.0 Flash",
+                "organization_id": "google",
+                "release_date": "2024-12-01"
+            },
+            {
+                "model_id": "gemma-2-27b-it",
+                "name": "Gemma 2 27B",
+                "organization_id": "google",
+                "release_date": "2024-06-27"
+            },
+            {
+                "model_id": "gemma-2-9b-it",
+                "name": "Gemma 2 9B",
+                "organization_id": "google",
+                "release_date": "2024-06-27"
+            },
+            {
+                "model_id": "gemini-1.5-flash",
+                "name": "Gemini 1.5 Flash",
+                "organization_id": "google",
+                "release_date": "2024-05-01"
+            },
+            {
+                "model_id": "gemini-1.5-pro",
+                "name": "Gemini 1.5 Pro",
+                "organization_id": "google",
+                "release_date": "2024-05-01"
+            },
+            {
+                "model_id": "gemini-1.5-flash-8b",
+                "name": "Gemini 1.5 Flash 8B",
+                "organization_id": "google",
+                "release_date": "2024-03-15"
+            },
+            {
+                "model_id": "gemini-1.0-pro",
+                "name": "Gemini 1.0 Pro",
+                "organization_id": "google",
+                "release_date": "2024-02-15"
+            }
+        ]
+    },
+    {
+        "name": "IBM",
+        "organization_id": "ibm",
+        "models": [
+            {
+                "model_id": "granite-4.0-tiny-preview",
+                "name": "IBM Granite 4.0 Tiny Preview",
+                "organization_id": "ibm",
+                "release_date": "2025-05-02"
+            },
+            {
+                "model_id": "granite-3.3-8b-base",
+                "name": "Granite 3.3 8B Base",
+                "organization_id": "ibm",
+                "release_date": "2025-04-16"
+            },
+            {
+                "model_id": "granite-3.3-8b-instruct",
+                "name": "Granite 3.3 8B Instruct",
+                "organization_id": "ibm",
+                "release_date": "2025-04-16"
+            }
+        ]
+    },
+    {
+        "name": "Meta",
+        "organization_id": "meta",
+        "models": [
+            {
+                "model_id": "llama-4-maverick",
+                "name": "Llama 4 Maverick",
+                "organization_id": "meta",
+                "release_date": "2025-04-05"
+            },
+            {
+                "model_id": "llama-4-scout",
+                "name": "Llama 4 Scout",
+                "organization_id": "meta",
+                "release_date": "2025-04-05"
+            },
+            {
+                "model_id": "llama-3.3-70b-instruct",
+                "name": "Llama 3.3 70B Instruct",
+                "organization_id": "meta",
+                "release_date": "2024-12-06"
+            },
+            {
+                "model_id": "llama-3.2-11b-instruct",
+                "name": "Llama 3.2 11B Instruct",
+                "organization_id": "meta",
+                "release_date": "2024-09-25"
+            },
+            {
+                "model_id": "llama-3.2-3b-instruct",
+                "name": "Llama 3.2 3B Instruct",
+                "organization_id": "meta",
+                "release_date": "2024-09-25"
+            },
+            {
+                "model_id": "llama-3.2-90b-instruct",
+                "name": "Llama 3.2 90B Instruct",
+                "organization_id": "meta",
+                "release_date": "2024-09-25"
+            },
+            {
+                "model_id": "llama-3.1-405b-instruct",
+                "name": "Llama 3.1 405B Instruct",
+                "organization_id": "meta",
+                "release_date": "2024-07-23"
+            },
+            {
+                "model_id": "llama-3.1-70b-instruct",
+                "name": "Llama 3.1 70B Instruct",
+                "organization_id": "meta",
+                "release_date": "2024-07-23"
+            },
+            {
+                "model_id": "llama-3.1-8b-instruct",
+                "name": "Llama 3.1 8B Instruct",
+                "organization_id": "meta",
+                "release_date": "2024-07-23"
+            }
+        ]
+    },
+    {
+        "name": "Microsoft",
+        "organization_id": "microsoft",
+        "models": [
+            {
+                "model_id": "phi-4-mini-reasoning",
+                "name": "Phi 4 Mini Reasoning",
+                "organization_id": "microsoft",
+                "release_date": "2025-04-30"
+            },
+            {
+                "model_id": "phi-4-reasoning",
+                "name": "Phi 4 Reasoning",
+                "organization_id": "microsoft",
+                "release_date": "2025-04-30"
+            },
+            {
+                "model_id": "phi-4-reasoning-plus",
+                "name": "Phi 4 Reasoning Plus",
+                "organization_id": "microsoft",
+                "release_date": "2025-04-30"
+            },
+            {
+                "model_id": "phi-4-mini",
+                "name": "Phi 4 Mini",
+                "organization_id": "microsoft",
+                "release_date": "2025-02-01"
+            },
+            {
+                "model_id": "phi-4-multimodal-instruct",
+                "name": "Phi-4-multimodal-instruct",
+                "organization_id": "microsoft",
+                "release_date": "2025-02-01"
+            },
+            {
+                "model_id": "phi-4",
+                "name": "Phi 4",
+                "organization_id": "microsoft",
+                "release_date": "2024-12-12"
+            },
+            {
+                "model_id": "phi-3.5-mini-instruct",
+                "name": "Phi-3.5-mini-instruct",
+                "organization_id": "microsoft",
+                "release_date": "2024-08-23"
+            },
+            {
+                "model_id": "phi-3.5-moe-instruct",
+                "name": "Phi-3.5-MoE-instruct",
+                "organization_id": "microsoft",
+                "release_date": "2024-08-23"
+            },
+            {
+                "model_id": "phi-3.5-vision-instruct",
+                "name": "Phi-3.5-vision-instruct",
+                "organization_id": "microsoft",
+                "release_date": "2024-08-23"
+            }
+        ]
+    },
+    {
+        "name": "MiniMax",
+        "organization_id": "minimax",
+        "models": [
+            {
+                "model_id": "minimax-m2",
+                "name": "MiniMax M2",
+                "organization_id": "minimax",
+                "release_date": "2025-10-27"
+            },
+            {
+                "model_id": "minimax-m1-40k",
+                "name": "MiniMax M1 40K",
+                "organization_id": "minimax",
+                "release_date": "2025-06-16"
+            },
+            {
+                "model_id": "minimax-m1-80k",
+                "name": "MiniMax M1 80K",
+                "organization_id": "minimax",
+                "release_date": "2025-06-16"
+            }
+        ]
+    },
+    {
+        "name": "Mistral AI",
+        "organization_id": "mistral",
+        "models": [
+            {
+                "model_id": "ministral-3-14b-base-2512",
+                "name": "Ministral 3 (14B Base 2512)",
+                "organization_id": "mistral",
+                "release_date": "2025-12-04"
+            },
+            {
+                "model_id": "ministral-3-14b-instruct-2512",
+                "name": "MiniStral 3 (14B Instruct 2512)",
+                "organization_id": "mistral",
+                "release_date": "2025-12-04"
+            },
+            {
+                "model_id": "ministral-14b-latest",
+                "name": "Ministral 3 (14B Reasoning 2512)",
+                "organization_id": "mistral",
+                "release_date": "2025-12-04"
+            },
+            {
+                "model_id": "ministral-3-3b-base-2512",
+                "name": "Ministral 3 (3B Base 2512)",
+                "organization_id": "mistral",
+                "release_date": "2025-12-04"
+            },
+            {
+                "model_id": "ministral-3-3b-instruct-2512",
+                "name": "Ministral 3 (3B Instruct 2512)",
+                "organization_id": "mistral",
+                "release_date": "2025-12-04"
+            },
+            {
+                "model_id": "ministral-3b-latest",
+                "name": "Min  istral 3 (3B Reasoning 2512)",
+                "organization_id": "mistral",
+                "release_date": "2025-12-04"
+            },
+            {
+                "model_id": "ministral-3-8b-base-2512",
+                "name": "Ministral 3 (8B Base 2512)",
+                "organization_id": "mistral",
+                "release_date": "2025-12-04"
+            },
+            {
+                "model_id": "ministral-3-8b-instruct-2512",
+                "name": "Ministral 3 (8B Instruct 2512)",
+                "organization_id": "mistral",
+                "release_date": "2025-12-04"
+            },
+            {
+                "model_id": "ministral-8b-latest",
+                "name": "Ministral 3 (8B Reasoning 2512)",
+                "organization_id": "mistral",
+                "release_date": "2025-12-04"
+            },
+            {
+                "model_id": "mistral-large-3-675b-base-2512",
+                "name": "Mistral Large 3 (675B Base)",
+                "organization_id": "mistral",
+                "release_date": "2025-12-04"
+            },
+            {
+                "model_id": "mistral-large-latest",
+                "name": "Mistral Large 3 (675B Instruct 2512)",
+                "organization_id": "mistral",
+                "release_date": "2025-12-04"
+            },
+            {
+                "model_id": "mistral-large-3-675B-instruct-2512-eagle",
+                "name": "Mistral Large 3 (675B Instruct 2512 Eagle)",
+                "organization_id": "mistral",
+                "release_date": "2025-12-04"
+            },
+            {
+                "model_id": "mistral-large-3-675b-instruct-2512-nvfp4",
+                "name": "Mistral Large 3 (675B Instruct 2512 NVFP4)",
+                "organization_id": "mistral",
+                "release_date": "2025-12-04"
+            },
+            {
+                "model_id": "devstral-small-2507",
+                "name": "Devstral Small 1.1",
+                "organization_id": "mistral",
+                "release_date": "2025-07-11"
+            },
+            {
+                "model_id": "devstral-medium-2507",
+                "name": "Devstral Medium",
+                "organization_id": "mistral",
+                "release_date": "2025-07-10"
+            },
+            {
+                "model_id": "mistral-small-3.2-24b-instruct-2506",
+                "name": "Mistral Small 3.2 24B Instruct",
+                "organization_id": "mistral",
+                "release_date": "2025-06-20"
+            },
+            {
+                "model_id": "magistral-medium",
+                "name": "Magistral Medium",
+                "organization_id": "mistral",
+                "release_date": "2025-06-10"
+            },
+            {
+                "model_id": "magistral-small-2506",
+                "name": "Magistral Small 2506",
+                "organization_id": "mistral",
+                "release_date": "2025-06-10"
+            },
+            {
+                "model_id": "mistral-small-3.1-24b-base-2503",
+                "name": "Mistral Small 3.1 24B Base",
+                "organization_id": "mistral",
+                "release_date": "2025-03-17"
+            },
+            {
+                "model_id": "mistral-small-3.1-24b-instruct-2503",
+                "name": "Mistral Small 3.1 24B Instruct",
+                "organization_id": "mistral",
+                "release_date": "2025-03-17"
+            },
+            {
+                "model_id": "mistral-small-24b-base-2501",
+                "name": "Mistral Small 3 24B Base",
+                "organization_id": "mistral",
+                "release_date": "2025-01-30"
+            },
+            {
+                "model_id": "mistral-small-24b-instruct-2501",
+                "name": "Mistral Small 3 24B Instruct",
+                "organization_id": "mistral",
+                "release_date": "2025-01-30"
+            },
+            {
+                "model_id": "pixtral-large",
+                "name": "Pixtral Large",
+                "organization_id": "mistral",
+                "release_date": "2024-11-18"
+            },
+            {
+                "model_id": "ministral-8b-instruct-2410",
+                "name": "Ministral 8B Instruct",
+                "organization_id": "mistral",
+                "release_date": "2024-10-16"
+            },
+            {
+                "model_id": "mistral-small-2409",
+                "name": "Mistral Small",
+                "organization_id": "mistral",
+                "release_date": "2024-09-17"
+            },
+            {
+                "model_id": "pixtral-12b-2409",
+                "name": "Pixtral-12B",
+                "organization_id": "mistral",
+                "release_date": "2024-09-17"
+            },
+            {
+                "model_id": "mistral-large-2-2407",
+                "name": "Mistral Large 2",
+                "organization_id": "mistral",
+                "release_date": "2024-07-24"
+            },
+            {
+                "model_id": "mistral-nemo-instruct-2407",
+                "name": "Mistral NeMo Instruct",
+                "organization_id": "mistral",
+                "release_date": "2024-07-18"
+            },
+            {
+                "model_id": "codestral-22b",
+                "name": "Codestral-22B",
+                "organization_id": "mistral",
+                "release_date": "2024-05-29"
+            }
+        ]
+    },
+    {
+        "name": "Moonshot AI",
+        "organization_id": "moonshotai",
+        "models": [
+            {
+                "model_id": "kimi-k2-0905",
+                "name": "Kimi K2 0905",
+                "organization_id": "moonshotai",
+                "release_date": "2025-09-05"
+            },
+            {
+                "model_id": "kimi-k2-instruct-0905",
+                "name": "Kimi K2-Instruct-0905",
+                "organization_id": "moonshotai",
+                "release_date": "2025-09-05"
+            },
+            {
+                "model_id": "kimi-k2-thinking-0905",
+                "name": "Kimi K2-Thinking-0905",
+                "organization_id": "moonshotai",
+                "release_date": "2025-09-05"
+            },
+            {
+                "model_id": "kimi-k2-base",
+                "name": "Kimi K2 Base",
+                "organization_id": "moonshotai",
+                "release_date": "2025-07-11"
+            },
+            {
+                "model_id": "kimi-k2-instruct",
+                "name": "Kimi K2 Instruct",
+                "organization_id": "moonshotai",
+                "release_date": "2025-07-11"
+            },
+            {
+                "model_id": "kimi-k1.5",
+                "name": "Kimi-k1.5",
+                "organization_id": "moonshotai",
+                "release_date": "2025-01-20"
+            }
+        ]
+    },
+    {
+        "name": "NVIDIA",
+        "organization_id": "nvidia",
+        "models": [
+            {
+                "model_id": "nvidia-nemotron-nano-9b-v2",
+                "name": "Nemotron Nano 9B v2",
+                "organization_id": "nvidia",
+                "release_date": "2025-08-18"
+            },
+            {
+                "model_id": "llama-3.1-nemotron-ultra-253b-v1",
+                "name": "Llama 3.1 Nemotron Ultra 253B v1",
+                "organization_id": "nvidia",
+                "release_date": "2025-04-07"
+            },
+            {
+                "model_id": "llama-3.1-nemotron-nano-8b-v1",
+                "name": "Llama 3.1 Nemotron Nano 8B V1",
+                "organization_id": "nvidia",
+                "release_date": "2025-03-18"
+            },
+            {
+                "model_id": "llama-3.3-nemotron-super-49b-v1",
+                "name": "Llama-3.3 Nemotron Super 49B v1",
+                "organization_id": "nvidia",
+                "release_date": "2025-03-18"
+            },
+            {
+                "model_id": "llama-3.1-nemotron-70b-instruct",
+                "name": "Llama 3.1 Nemotron 70B Instruct",
+                "organization_id": "nvidia",
+                "release_date": "2024-10-01"
+            }
+        ]
+    },
+    {
+        "name": "OpenAI",
+        "organization_id": "openai",
+        "models": [
+            {
+                "model_id": "gpt-5.2-2025-12-11",
+                "name": "GPT-5.2",
+                "organization_id": "openai",
+                "release_date": "2025-12-11"
+            },
+            {
+                "model_id": "gpt-5.2-pro-2025-12-11",
+                "name": "GPT-5.2 Pro",
+                "organization_id": "openai",
+                "release_date": "2025-12-11"
+            },
+            {
+                "model_id": "gpt-5.1-codex",
+                "name": "GPT-5.1 Codex",
+                "organization_id": "openai",
+                "release_date": "2025-11-19"
+            },
+            {
+                "model_id": "gpt-5.1-2025-11-13",
+                "name": "GPT-5.1",
+                "organization_id": "openai",
+                "release_date": "2025-11-13"
+            },
+            {
+                "model_id": "gpt-5.1-instant-2025-11-12",
+                "name": "GPT-5.1 Instant",
+                "organization_id": "openai",
+                "release_date": "2025-11-12"
+            },
+            {
+                "model_id": "gpt-5.1-thinking-2025-11-12",
+                "name": "GPT-5.1 Thinking",
+                "organization_id": "openai",
+                "release_date": "2025-11-12"
+            },
+            {
+                "model_id": "gpt-5-codex-2025-09-15",
+                "name": "GPT-5 Codex",
+                "organization_id": "openai",
+                "release_date": "2025-09-15"
+            },
+            {
+                "model_id": "gpt-5-2025-08-07",
+                "name": "GPT-5",
+                "organization_id": "openai",
+                "release_date": "2025-08-07"
+            },
+            {
+                "model_id": "gpt-5-mini-2025-08-07",
+                "name": "GPT-5 mini",
+                "organization_id": "openai",
+                "release_date": "2025-08-07"
+            },
+            {
+                "model_id": "gpt-5-nano-2025-08-07",
+                "name": "GPT-5 nano",
+                "organization_id": "openai",
+                "release_date": "2025-08-07"
+            },
+            {
+                "model_id": "gpt-oss-120b",
+                "name": "GPT OSS 120B",
+                "organization_id": "openai",
+                "release_date": "2025-08-05"
+            },
+            {
+                "model_id": "gpt-oss-20b",
+                "name": "GPT OSS 20B",
+                "organization_id": "openai",
+                "release_date": "2025-08-05"
+            },
+            {
+                "model_id": "o3-pro-2025-06-10",
+                "name": "o3-pro",
+                "organization_id": "openai",
+                "release_date": "2025-06-10"
+            },
+            {
+                "model_id": "o3-2025-04-16",
+                "name": "o3",
+                "organization_id": "openai",
+                "release_date": "2025-04-16"
+            },
+            {
+                "model_id": "o4-mini",
+                "name": "o4-mini",
+                "organization_id": "openai",
+                "release_date": "2025-04-16"
+            },
+            {
+                "model_id": "gpt-4.1-2025-04-14",
+                "name": "GPT-4.1",
+                "organization_id": "openai",
+                "release_date": "2025-04-14"
+            },
+            {
+                "model_id": "gpt-4.1-mini-2025-04-14",
+                "name": "GPT-4.1 mini",
+                "organization_id": "openai",
+                "release_date": "2025-04-14"
+            },
+            {
+                "model_id": "gpt-4.1-nano-2025-04-14",
+                "name": "GPT-4.1 nano",
+                "organization_id": "openai",
+                "release_date": "2025-04-14"
+            },
+            {
+                "model_id": "gpt-4.5",
+                "name": "GPT-4.5",
+                "organization_id": "openai",
+                "release_date": "2025-02-27"
+            },
+            {
+                "model_id": "o3-mini",
+                "name": "o3-mini",
+                "organization_id": "openai",
+                "release_date": "2025-01-30"
+            },
+            {
+                "model_id": "o1-2024-12-17",
+                "name": "o1",
+                "organization_id": "openai",
+                "release_date": "2024-12-17"
+            },
+            {
+                "model_id": "o1-pro",
+                "name": "o1-pro",
+                "organization_id": "openai",
+                "release_date": "2024-12-17"
+            },
+            {
+                "model_id": "o1-mini",
+                "name": "o1-mini",
+                "organization_id": "openai",
+                "release_date": "2024-09-12"
+            },
+            {
+                "model_id": "o1-preview",
+                "name": "o1-preview",
+                "organization_id": "openai",
+                "release_date": "2024-09-12"
+            },
+            {
+                "model_id": "gpt-4o-2024-08-06",
+                "name": "GPT-4o",
+                "organization_id": "openai",
+                "release_date": "2024-08-06"
+            },
+            {
+                "model_id": "gpt-4o-mini-2024-07-18",
+                "name": "GPT-4o mini",
+                "organization_id": "openai",
+                "release_date": "2024-07-18"
+            },
+            {
+                "model_id": "gpt-4o-2024-05-13",
+                "name": "GPT-4o",
+                "organization_id": "openai",
+                "release_date": "2024-05-13"
+            },
+            {
+                "model_id": "gpt-4-turbo-2024-04-09",
+                "name": "GPT-4 Turbo",
+                "organization_id": "openai",
+                "release_date": "2024-04-09"
+            },
+            {
+                "model_id": "gpt-4-0613",
+                "name": "GPT-4",
+                "organization_id": "openai",
+                "release_date": "2023-06-13"
+            },
+            {
+                "model_id": "gpt-3.5-turbo-0125",
+                "name": "GPT-3.5 Turbo",
+                "organization_id": "openai",
+                "release_date": "2023-03-21"
+            }
+        ]
+    },
+    {
+        "name": "xAI",
+        "organization_id": "xai",
+        "models": [
+            {
+                "model_id": "grok-4-heavy",
+                "name": "Grok-4 Heavy",
+                "organization_id": "xai",
+                "release_date": null
+            },
+            {
+                "model_id": "grok-4.1-2025-11-17",
+                "name": "Grok-4.1",
+                "organization_id": "xai",
+                "release_date": "2025-11-17"
+            },
+            {
+                "model_id": "grok-4-1-fast-non-reasoning",
+                "name": "Grok-4.1 Fast Non-Reasoning",
+                "organization_id": "xai",
+                "release_date": "2025-11-17"
+            },
+            {
+                "model_id": "grok-4-1-fast-reasoning",
+                "name": "Grok-4.1 Fast Reasoning",
+                "organization_id": "xai",
+                "release_date": "2025-11-17"
+            },
+            {
+                "model_id": "grok-4.1-thinking-2025-11-17",
+                "name": "Grok-4.1 Thinking",
+                "organization_id": "xai",
+                "release_date": "2025-11-17"
+            },
+            {
+                "model_id": "grok-4-fast",
+                "name": "Grok 4 Fast",
+                "organization_id": "xai",
+                "release_date": "2025-08-28"
+            },
+            {
+                "model_id": "grok-4-fast-non-reasoning",
+                "name": "Grok-4 Fast Non-Reasoning",
+                "organization_id": "xai",
+                "release_date": "2025-08-28"
+            },
+            {
+                "model_id": "grok-4-fast-reasoning",
+                "name": "Grok-4 Fast Reasoning",
+                "organization_id": "xai",
+                "release_date": "2025-08-28"
+            },
+            {
+                "model_id": "grok-code-fast-1",
+                "name": "Grok Code Fast 1",
+                "organization_id": "xai",
+                "release_date": "2025-08-28"
+            },
+            {
+                "model_id": "grok-4",
+                "name": "Grok-4",
+                "organization_id": "xai",
+                "release_date": "2025-07-09"
+            },
+            {
+                "model_id": "grok-3",
+                "name": "Grok-3",
+                "organization_id": "xai",
+                "release_date": "2025-02-17"
+            },
+            {
+                "model_id": "grok-3-mini",
+                "name": "Grok-3 Mini",
+                "organization_id": "xai",
+                "release_date": "2025-02-17"
+            },
+            {
+                "model_id": "grok-2-image-1212",
+                "name": "Grok-2 Image 1212",
+                "organization_id": "xai",
+                "release_date": "2024-12-12"
+            },
+            {
+                "model_id": "grok-2",
+                "name": "Grok-2",
+                "organization_id": "xai",
+                "release_date": "2024-08-13"
+            },
+            {
+                "model_id": "grok-2-mini",
+                "name": "Grok-2 mini",
+                "organization_id": "xai",
+                "release_date": "2024-08-13"
+            },
+            {
+                "model_id": "grok-1.5v",
+                "name": "Grok-1.5V",
+                "organization_id": "xai",
+                "release_date": "2024-04-12"
+            },
+            {
+                "model_id": "grok-1.5",
+                "name": "Grok-1.5",
+                "organization_id": "xai",
+                "release_date": "2024-03-28"
+            }
+        ]
+    },
+    {
+        "name": "Zhipu AI",
+        "organization_id": "zai-org",
+        "models": [
+            {
+                "model_id": "glm-4.6",
+                "name": "GLM-4.6",
+                "organization_id": "zai-org",
+                "release_date": "2025-09-30"
+            },
+            {
+                "model_id": "glm-4.5v",
+                "name": "GLM-4.5V",
+                "organization_id": "zai-org",
+                "release_date": "2025-08-11"
+            },
+            {
+                "model_id": "glm-4.5",
+                "name": "GLM-4.5",
+                "organization_id": "zai-org",
+                "release_date": "2025-07-28"
+            },
+            {
+                "model_id": "glm-4.5-air",
+                "name": "GLM-4.5-Air",
+                "organization_id": "zai-org",
+                "release_date": "2025-07-28"
+            }
+        ]
+    }
+]
