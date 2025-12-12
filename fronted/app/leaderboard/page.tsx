@@ -20,6 +20,7 @@ import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { GlitchText } from "@/components/glitch-text"
 import type { LeaderboardItem, ZeroEvalJson, ZeroEvalModel, LeaderboardItemProps } from "@/lib/type"
+import { buildDataMap } from "@/lib/utils/data-transform-utils/leaderboard"
 
 
 const categories = [
@@ -30,82 +31,7 @@ const categories = [
   { id: "newmodels", name: "新星榜", icon: Sparkles, color: "neon-purple" },
 ]
 
-const ORG_COLOR: Record<string, string> = {
-  openai: "neon-green",
-  anthropic: "neon-purple",
-  google: "neon-blue",
-  meta: "neon-blue",
-  deepseek: "neon-pink",
-  alibaba: "destructive",
-  mistralai: "neon-blue",
-  xai: "neon-purple",
-}
-
-function pickScoreOverall(m: ZeroEvalModel) {
-  const v = m.scores?.chat ?? m.scores?.gpqa ?? m.scores?.aime_2025 ?? m.scores?.mmmu ?? m.scores?.code ?? m.scores?.swe_bench ?? 0
-  return Math.round((v || 0) * 100000)
-}
-
-function pickScoreReasoning(m: ZeroEvalModel) {
-  const v = m.scores?.gpqa ?? m.scores?.aime_2025 ?? m.scores?.mmmu ?? 0
-  return Math.round((v || 0) * 100000)
-}
-
-function pickScorePopularity(m: ZeroEvalModel) {
-  const v = m.scores?.chat ?? m.scores?.gpqa ?? 0
-  return Math.round((v || 0) * 100000)
-}
-
-function pickScoreCodingPercent(m: ZeroEvalModel) {
-  const v = m.scores?.code ?? m.scores?.swe_bench ?? 0
-  return Math.round((v || 0) * 100)
-}
-
-function toItem(m: ZeroEvalModel, score: number, rank: number): LeaderboardItem {
-  const orgId = (m.organization?.id || "").toLowerCase()
-  const elementColor = ORG_COLOR[orgId] || "neon-blue"
-  const avatar = m.organization?.icon_url || "/placeholder.svg?height=100&width=100"
-  const stats = {
-    reasoning: Math.round(((m.scores?.gpqa ?? 0) || 0) * 100),
-    coding: Math.round(((m.scores?.code ?? 0) || 0) * 100),
-    creative: Math.round(((m.scores?.mmmu ?? 0) || 0) * 100),
-  }
-  return {
-    id: rank,
-    rank,
-    name: m.name || m.model_id || "Unknown",
-    avatar,
-    score,
-    element: m.organization?.name || "Unknown",
-    elementColor,
-    description: `${m.name || m.model_id} · ${m.organization?.name || "Unknown"}`,
-    stats,
-  }
-}
-
-function buildDataMap(models: ZeroEvalModel[]): Record<string, LeaderboardItem[]> {
-  const overallSorted = [...models].sort((a, b) => pickScoreOverall(b) - pickScoreOverall(a))
-  const overall = overallSorted.map((m, i) => toItem(m, pickScoreOverall(m), i + 1))
-
-  const reasoningSorted = [...models].sort((a, b) => pickScoreReasoning(b) - pickScoreReasoning(a))
-  const reasoning = reasoningSorted.map((m, i) => toItem(m, pickScoreReasoning(m), i + 1))
-
-  const popularitySorted = [...models].sort((a, b) => pickScorePopularity(b) - pickScorePopularity(a))
-  const popularity = popularitySorted.map((m, i) => toItem(m, pickScorePopularity(m), i + 1))
-
-  const codingCandidates = models.filter((m) => (m.scores?.code ?? m.scores?.swe_bench) != null)
-  const codingSorted = [...codingCandidates].sort((a, b) => pickScoreCodingPercent(b) - pickScoreCodingPercent(a))
-  const coding = codingSorted.map((m, i) => toItem(m, pickScoreCodingPercent(m), i + 1))
-
-  const withDate = models
-    .map((m) => ({ m, d: m.meta?.release_date ? Date.parse(m.meta.release_date) : NaN }))
-    .filter((x) => !Number.isNaN(x.d))
-    .sort((a, b) => b.d - a.d)
-    .map((x, i) => toItem(x.m, pickScoreOverall(x.m), i + 1))
-  const newmodels = withDate.length > 0 ? withDate : overall.slice(0, 10)
-
-  return { overall, reasoning, popularity, coding, newmodels }
-}
+ 
 
 let cachedLoad: Promise<{ map: Record<string, LeaderboardItem[]>; lastUpdated: string }> | null = null
 async function loadData(): Promise<{ map: Record<string, LeaderboardItem[]>; lastUpdated: string }> {

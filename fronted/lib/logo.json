@@ -1,0 +1,72 @@
+[
+  {
+    "name": "AI21 Labs",
+    "organization_id": "ai21",
+    "website": "https://www.ai21.com"
+  },
+  {
+    "name": "Alibaba Cloud / Qwen Team",
+    "organization_id": "qwen",
+    "website": "https://www.alibaba.com/company/global/qwen"
+  },
+  {
+    "name": "Amazon",
+    "organization_id": "amazon"
+  },
+  {
+    "name": "Anthropic",
+    "organization_id": "anthropic"
+  },
+  {
+    "name": "Cohere",
+    "organization_id": "cohere"
+  },
+  {
+    "name": "DeepSeek",
+    "organization_id": "deepseek"
+  },
+  {
+    "name": "Google",
+    "organization_id": "google"
+  },
+  {
+    "name": "IBM",
+    "organization_id": "ibm"
+  },
+  {
+    "name": "Meta",
+    "organization_id": "meta"
+  },
+  {
+    "name": "Microsoft",
+    "organization_id": "microsoft"
+  },
+  {
+    "name": "MiniMax",
+    "organization_id": "minimax"
+  },
+  {
+    "name": "Mistral AI",
+    "organization_id": "mistral"
+  },
+  {
+    "name": "Moonshot AI",
+    "organization_id": "moonshotai"
+  },
+  {
+    "name": "NVIDIA",
+    "organization_id": "nvidia"
+  },
+  {
+    "name": "OpenAI",
+    "organization_id": "openai"
+  },
+  {
+    "name": "xAI",
+    "organization_id": "xai"
+  },
+  {
+    "name": "Zhipu AI",
+    "organization_id": "zai-org"
+  }
+]

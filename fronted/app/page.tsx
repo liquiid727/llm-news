@@ -1,7 +1,7 @@
 import { Navbar } from "@/components/navbar"
 import { HeroSection } from "@/components/hero-section"
 import { NewsSection } from "@/components/news-section"
-import { Leaderboard } from "@/components/leaderboard"
+import { HotLeaderboard } from "@/components/leaderboard"
 import { Footer } from "@/components/footer"
 import { GridBackground } from "@/components/grid-background"
 
@@ -17,7 +17,7 @@ export default function Home() {
             <NewsSection />
           </div>
           <div className="lg:col-span-1">
-            <Leaderboard />
+            <HotLeaderboard />
           </div>
         </div>
       </div>

@@ -1,7 +1,8 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { Radio, Wifi, Signal } from "lucide-react"
+import Image from "next/image"
+import { Wifi, Signal } from "lucide-react"
 
 export function Footer() {
   const [signalStrength, setSignalStrength] = useState(4)
@@ -20,10 +21,10 @@ export function Footer() {
 
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
-          {/* Logo & Copyright - 更新版权文字 */}
+          {/* Logo & Copyright */}
           <div className="flex items-center gap-3">
-            <div className="relative flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-neon-blue to-neon-pink">
-              <Radio className="h-4 w-4 text-background" />
+            <div className="relative h-8 w-8 overflow-hidden rounded-lg border border-border">
+              <Image src="/site-dark.svg" alt="LLM.NEWS" fill className="object-cover" />
             </div>
             <div>
               <p className="font-mono text-sm text-muted-foreground">© 2025 LLM.NEWS | 大模型情报站</p>

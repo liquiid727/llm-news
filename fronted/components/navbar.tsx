@@ -2,16 +2,17 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { Menu, X, Tv2, Radio } from "lucide-react"
+import Image from "next/image"
+import { Menu, X, Radio } from "lucide-react"
 import { GlitchText } from "./glitch-text"
 
 const navLinks = [
   { name: "首页", href: "/" },
-  { name: "新闻", href: "/#news" },
+  { name: "新闻", href: "/news" },
   { name: "排行榜", href: "/leaderboard" },
   { name: "模型广场", href: "/models" },
-  { name: "Hot", href: "/#hot" },
-  { name: "测评", href: "/#benchmark" },
+  { name: "Hot", href: "/hot" },
+  { name: "测评", href: "/review" },
 ]
 
 export function Navbar() {
@@ -23,9 +24,8 @@ export function Navbar() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <div className="relative flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-neon-blue to-neon-pink">
-              <Tv2 className="h-6 w-6 text-background" />
-              <div className="absolute inset-0 animate-pulse rounded-lg bg-neon-blue/30 blur-md" />
+            <div className="relative h-10 w-10 overflow-hidden rounded-lg border border-border">
+              <Image src="/site-dark.svg" alt="LLM.NEWS" fill className="object-cover" />
             </div>
             <GlitchText text="LLM.NEWS" className="font-mono text-xl font-bold tracking-wider text-foreground" />
           </Link>

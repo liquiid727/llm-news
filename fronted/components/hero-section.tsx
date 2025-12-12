@@ -44,7 +44,7 @@ export function HeroSection() {
             </div>
             <div className="flex items-center gap-2 rounded-full border border-neon-purple/30 bg-neon-purple/10 px-4 py-2">
               <Zap className="h-4 w-4 text-neon-purple" />
-              <span className="font-mono text-xs text-neon-purple">AI研究院</span>
+              <span className="font-mono text-xs text-neon-purple">AI啃瓜的莱特</span>
             </div>
           </div>
 
